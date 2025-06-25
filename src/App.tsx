@@ -1,35 +1,25 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import Dropdown from "./components/Dropdown";
+import Header from "./components/Header";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const headerTitle = "RunGood";
+  const headerSubtitle = "A poker hand logger";
+  const suitTitle = "Select your suit";
+  const suits = [suitTitle, "Hearts", "Diamonds", "Spades", "Clubs"];
+  const cardTitle = "Select your card";
+  const cards = [cardTitle, "A", "K", "Q", "J", "T", "9", "8", "7", "6", "5", "4", "3", "2"];
 
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <Header title={headerTitle} subtitle={headerSubtitle} />
+      <h3>Card 1</h3>
+      <Dropdown title={cardTitle} content={cards}/>
+      <Dropdown title={suitTitle} content={suits}/>
+      <h3>Card 2</h3>
+      <Dropdown title={cardTitle} content={cards}/>
+      <Dropdown title={suitTitle} content={suits}/>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
