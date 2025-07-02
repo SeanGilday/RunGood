@@ -1,3 +1,3 @@
 # A poker hand logger
 
-Hours spent: 2
+Hours spent: 4
