@@ -1,87 +1,44 @@
+import { useState } from "react";
 import Dropdown from "./Dropdown";
 
 function GameInfo() {
-  const positions = [
-    "Small Blind",
-    "Big Blind",
-    "UTG",
-    "UTG+1",
-    "MP",
-    "Lojack",
-    "Hijack",
-    "Cutoff",
-    "Button",
-  ];
+	const [isCashGame, setIsCashGame] = useState(false);
+	const blindOptions = ["0.10/0.20", "0.25/0.50", "1/2", "2/5"];
+	const numPlayerOptions = ["2", "3", "4", "5", "6", "7", "8", "9"];
+	const positionOptions = [
+		"Small Blind",
+		"Big Blind",
+		"UTG",
+		"UTG+1",
+		"MP",
+		"Lojack",
+		"Hijack",
+		"Cutoff",
+		"Button",
+	];
 
-  return (
-    <>
-      <div id="gameInfo">
-        <tr>
-          <td>
-            <div className="input-group mb-3">
-              <input
-                type="text"
-                className="form-control"
-                placeholder="Location"
-                aria-label="Location"
-                aria-describedby="button-addon2"
-              />
-              <button
-                className="btn btn-outline-secondary"
-                type="button"
-                id="button-addon2"
-              >
-                Confirm
-              </button>
-            </div>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <div className="input-group mb-3">
-              <input
-                type="text"
-                className="form-control"
-                placeholder="How many handed?"
-                aria-label="How many handed?"
-                aria-describedby="button-addon2"
-              />
-              <button
-                className="btn btn-outline-secondary"
-                type="button"
-                id="button-addon2"
-              >
-                Confirm
-              </button>
-            </div>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <div className="input-group mb-3">
-              <input
-                type="text"
-                className="form-control"
-                placeholder="Stack size (BB)"
-                aria-label="Stack size (BB)"
-                aria-describedby="button-addon2"
-              />
-              <button
-                className="btn btn-outline-secondary"
-                type="button"
-                id="button-addon2"
-              >
-                Confirm
-              </button>
-            </div>
-          </td>
-          <td>
-            <Dropdown title="Position" content={positions} />
-          </td>
-        </tr>
-      </div>
-    </>
-  );
+	return (
+		<>
+			<div className="game-mode">
+				<span className="game-mode-label">Game Mode:</span>
+				<button
+					className="game-mode-button"
+					onClick={() => setIsCashGame(!isCashGame)}
+				>
+					{isCashGame ? "Cash" : "Tournament"}
+				</button>
+			</div>
+			<Dropdown title="Blinds" content={blindOptions} />
+			<div className="num-players">
+				<span className="num-players-label">Number of Players: </span>
+				<Dropdown title="" content={numPlayerOptions} />
+			</div>
+			<div className="position">
+				<span className="position-label">Hero Position: </span>
+				<Dropdown title="" content={positionOptions} />
+			</div>
+		</>
+	);
 }
 
 export default GameInfo;

@@ -1,12 +1,10 @@
-import GameInfo from "./components/GameInfo";
-import Cards from "./components/Cards";
+import HandSetup from "./HandSetup";
 
 function Body() {
   return (
     <>
       <table>
-        <GameInfo />
-        <Cards />
+        <HandSetup />
       </table>
     </>
   );

@@ -1,0 +1,26 @@
+.poker-table-img {
+    width: 50%;
+}
+
+.game-mode {
+    position: relative;
+    width: 50%;
+}
+
+.game-mode-button {
+    position: absolute;
+    width: 75%;
+    right: 0;
+}
+
+.game-mode-label {
+    width: 25%;
+}
+
+.num-players {
+    display: flex;
+}
+
+.position {
+    display: flex;
+}
