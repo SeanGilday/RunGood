@@ -1,0 +1,213 @@
+interface props {
+    shown: boolean
+}
+
+function Players(props: props) {
+	return (
+		<div style={{ visibility: props.shown ? "visible" : "hidden" }}>
+			<table>
+				<thead>
+					<tr>
+						<th>Stack</th>
+						<th>Position</th>
+						<th>Name</th>
+						<th>Hero?</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>
+							<input className="stack" placeholder="500"></input>
+						</td>
+						<td>Small Blind</td>
+						<td>
+							<input
+								className="name"
+								placeholder="Villain"
+							></input>
+						</td>
+						<td>
+							<button
+								type="button"
+								className="btn"
+								data-bs-toggle="button"
+							>
+								Hero
+							</button>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<input className="stack" placeholder="500"></input>
+						</td>
+						<td>Big Blind</td>
+						<td>
+							<input
+								className="name"
+								placeholder="Villain"
+							></input>
+						</td>
+						<td>
+							<button
+								type="button"
+								className="btn"
+								data-bs-toggle="button"
+							>
+								Hero
+							</button>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<input className="stack" placeholder="500"></input>
+						</td>
+						<td>UTG</td>
+						<td>
+							<input
+								className="name"
+								placeholder="Villain"
+							></input>
+						</td>
+						<td>
+							<button
+								type="button"
+								className="btn"
+								data-bs-toggle="button"
+							>
+								Hero
+							</button>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<input className="stack" placeholder="500"></input>
+						</td>
+						<td>UTG+1</td>
+						<td>
+							<input
+								className="name"
+								placeholder="Villain"
+							></input>
+						</td>
+						<td>
+							<button
+								type="button"
+								className="btn"
+								data-bs-toggle="button"
+							>
+								Hero
+							</button>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<input className="stack" placeholder="500"></input>
+						</td>
+						<td>MP</td>
+						<td>
+							<input
+								className="name"
+								placeholder="Villain"
+							></input>
+						</td>
+						<td>
+							<button
+								type="button"
+								className="btn"
+								data-bs-toggle="button"
+							>
+								Hero
+							</button>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<input className="stack" placeholder="500"></input>
+						</td>
+						<td>Lojack</td>
+						<td>
+							<input
+								className="name"
+								placeholder="Villain"
+							></input>
+						</td>
+						<td>
+							<button
+								type="button"
+								className="btn"
+								data-bs-toggle="button"
+							>
+								Hero
+							</button>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<input className="stack" placeholder="500"></input>
+						</td>
+						<td>Hijack</td>
+						<td>
+							<input
+								className="name"
+								placeholder="Villain"
+							></input>
+						</td>
+						<td>
+							<button
+								type="button"
+								className="btn"
+								data-bs-toggle="button"
+							>
+								Hero
+							</button>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<input className="stack" placeholder="500"></input>
+						</td>
+						<td>Cutoff</td>
+						<td>
+							<input
+								className="name"
+								placeholder="Villain"
+							></input>
+						</td>
+						<td>
+							<button
+								type="button"
+								className="btn"
+								data-bs-toggle="button"
+							>
+								Hero
+							</button>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<input className="stack" placeholder="500"></input>
+						</td>
+						<td>Button</td>
+						<td>
+							<input
+								className="name"
+								placeholder="Villain"
+							></input>
+						</td>
+						<td>
+							<button
+								type="button"
+								className="btn"
+								data-bs-toggle="button"
+							>
+								Hero
+							</button>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	);
+}
+
+export default Players;
